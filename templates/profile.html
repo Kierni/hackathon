@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoluPro - Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>VoluPro</h1>
+            <h2>Profile</h2>
+            <a href="/" class="profile-button">Home</a>
+        </div>
+        <div id="profile" class="content active">
+            <div class="profile">
+                <img src="{{ url_for('static', filename='profile.jpg') }}" alt="James">
+                <h3>James</h3>
+                <p>Medical Student • 36 Followers</p>
+                <div class="status">Online</div>
+                <div class="buttons">
+                    <button class="follow-btn">Follow</button>
+                    <button class="connect-btn">Connect</button>
+                </div>
+                <div class="profile-section">
+                    <h4>About me</h4>
+                    <p>I am a kind and friendly person who loves spending time with my family and friends. I enjoy helping others and always try to make people around me feel happy and comfortable.</p>
+                </div>
+                <div class="profile-section">
+                    <h4>Skills</h4>
+                    <div class="profile-tags">
+                        <span>outdoors</span>
+                        <span>community</span>
+                        <span>medical department</span>
+                        <span>gathering together</span>
+                    </div>
+                </div>
+                <div class="profile-section">
+                    <h4>Interest</h4>
+                    <div class="profile-tags">
+                        <span>outdoors</span>
+                        <span>community</span>
+                        <span>medical department</span>
+                        <span>gathering together</span>
+                    </div>
+                </div>
+                <div class="profile-section">
+                    <h4>Experience</h4>
+                    <p>UX Intern - Glycon software pvt (2018-2020, 3 years)</p>
+                    <p>UX Intern - Evergreen enterprise (2015-2017, 3 years)</p>
+                </div>
+                <div class="profile-section">
+                    <h4>Education</h4>
+                    <p>B.Tech of technology - University of California (2018-2024)</p>
+                </div>
+                <div class="profile-section">
+                    <h4>Socials</h4>
+                    <div class="profile-socials">
+                        <img src="{{ url_for('static', filename='instagram.png') }}" alt="Instagram">
+                        <img src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn">
+                        <img src="{{ url_for('static', filename='twitter.png') }}" alt="Twitter">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="/" class="home-button">Home</a>
+            <a href="/search" class="search-button">Search</a>
+        </div>
+    </div>
+<script>
+    function showContent(sectionId) {
+        const sections = document.querySelectorAll('.content');
+        sections.forEach(section => {
+            if (section.id === sectionId) {
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
+            }
+        });
+    }
+</script>
+</body>
+</html>

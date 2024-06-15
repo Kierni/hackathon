@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoluPro - Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>VoluPro</h1>
+            <h2>Search Volunteer Opportunities in Warsaw</h2>
+            <a href="/profile" class="profile-button">Profile</a>
+        </div>
+        <div id="search" class="content active">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="site-profiles">
+                <div class="site">
+                    <img src="{{ url_for('static', filename='Garden_volunteer.png') }}" alt="Community Garden Volunteer">
+                    <div class="site-details">
+                        <h3>Community Garden Volunteer</h3>
+                        <p>Age: 25-35, Category: Environmental Care, District: Mokotów, Warsaw, Poland</p>
+                    </div>
+                </div>
+                <div class="site">
+                    <img src="{{ url_for('static', filename='Social_Care.png') }}" alt="Senior Companion">
+                    <div class="site-details">
+                        <h3>Senior Companion</h3>
+                        <p>Age: 25-35, Category: Social Care, District: Mokotów, Warsaw, Poland</p>
+                    </div>
+                </div>
+                <div class="site">
+                    <img src="{{ url_for('static', filename='IT.png') }}" alt="IT Support for Non-Profits">
+                    <div class="site-details">
+                        <h3>IT Support for Non-Profits</h3>
+                        <p>Age: 18-25, Category: Technical Assistance, District: Mokotów, Warsaw, Poland</p>
+                    </div>
+                </div>
+                <div class="site">
+                    <img src="{{ url_for('static', filename='animal_shelter.jpg') }}" alt="Animal Shelter">
+                    <div class="site-details">
+                        <h3>Animal Shelter</h3>
+                        <p>Age: 25-35, Category: Animal Care, District: Mokotów</p>
+                    </div>
+                </div>
+                <div class="site">
+                    <img src="{{ url_for('static', filename='community_center.jpg') }}" alt="Community Center">
+                    <div class="site-details">
+                        <h3>Community Center</h3>
+                        <p>Age: 18-25, Category: Education, District: Śródmieście</p>
+                    </div>
+                </div>
+                <div class="site">
+                    <img src="{{ url_for('static', filename='animal_shelter.jpg') }}" alt="Animal Shelter">
+                    <div class="site-details">
+                        <h3>Animal Shelter</h3>
+                        <p>Age: 25-35, Category: Animal Care, District: Mokotów</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="/" class="home-button">Home</a>
+            <a href="#" class="search-button" onclick="showContent('search')">Search</a>
+        </div>
+    </div>
+<script>
+    function showContent(sectionId) {
+        const sections = document.querySelectorAll('.content');
+        sections.forEach(section => {
+            if (section.id === sectionId) {
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
+            }
+        });
+    }
+</script>
+</body>
+</html>
+
