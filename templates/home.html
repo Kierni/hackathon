@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoluPro - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .logo {
+            width: 50%; /* Adjust the percentage as needed */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='volpro_logo.png') }}" alt="VolPro Logo" class="logo">
+            <h1>VoluPro</h1>
+            <h2>Volunteer Opportunities in Warsaw</h2>
+            <a href="/profile" class="profile-button">Profile</a>
+        </div>
+        <div id="home" class="content active">
+            <div class="filters">
+                <button>Age</button>
+                <button>Availability</button>
+                <button>Category</button>
+                <button>District</button>
+            </div>
+            <div class="map"></div>
+            <div class="latest-events">Latest Events:</div>
+            <div class="site-profiles">
+                <div class="site">
+                    <img src="{{ url_for('static', filename='community_center.jpg') }}" alt="Community Center">
+                    <div class="site-details">
+                        <h3>Community Center || Points: 400</h3>
+                        <p>Age: 18-25, Category: Education, District: Śródmieście</p>
+                    </div>
+                </div>
+                <div class="site">
+                    <img src="{{ url_for('static', filename='animal_shelter.jpg') }}" alt="Animal Shelter">
+                    <div class="site-details">
+                        <h3>Animal Shelter || Points: 600</h3>
+                        <p>Age: 25-35, Category: Animal Care, District: Mokotów</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="/" class="home-button">Home</a>
+            <a href="/search" class="search-button">Search</a>
+        </div>
+    </div>
+</body>
+</html>

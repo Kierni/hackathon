@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VoluPro - Search</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .logo {
+            width: 50%; /* Adjust the percentage as needed */
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
+            <img src="{{ url_for('static', filename='volpro_logo.png') }}" alt="VolPro Logo" class="logo">
             <h1>VoluPro</h1>
             <h2>Search Volunteer Opportunities in Warsaw</h2>
             <a href="/profile" class="profile-button">Profile</a>
@@ -19,46 +26,70 @@
             </div>
             <div class="site-profiles">
                 <div class="site">
-                    <img src="{{ url_for('static', filename='Garden_volunteer.png') }}" alt="Community Garden Volunteer">
-                    <div class="site-details">
-                        <h3>Community Garden Volunteer</h3>
-                        <p>Age: 25-35, Category: Environmental Care, District: Mokotów, Warsaw, Poland</p>
-                    </div>
+                    <input type="checkbox" id="volunteer4" name="volunteer4" value="Animal Shelter" onclick="showMessage(this)">
+                    <label for="volunteer4">
+                        <img src="{{ url_for('static', filename='animal_shelter.jpg') }}" alt="Animal Shelter">
+                        <div class="site-details">
+                            <h3>Animal Shelter || Points: 850</h3>
+                            <p>Age: 25-35, Category: Animal Care, District: Mokotów, || Points: 850 </p>
+                        </div>
+                    </label>
+                    <div class="congrats-message" id="message4" style="display: none;">CONGRATULATIONS, you are taking part!</div>
                 </div>
                 <div class="site">
-                    <img src="{{ url_for('static', filename='Social_Care.png') }}" alt="Senior Companion">
-                    <div class="site-details">
-                        <h3>Senior Companion</h3>
-                        <p>Age: 25-35, Category: Social Care, District: Mokotów, Warsaw, Poland</p>
-                    </div>
+                    <input type="checkbox" id="volunteer5" name="volunteer5" value="Community Center" onclick="showMessage(this)">
+                    <label for="volunteer5">
+                        <img src="{{ url_for('static', filename='community_center.jpg') }}" alt="Community Center">
+                        <div class="site-details">
+                            <h3>Community Center || Points: 750</h3>
+                            <p>Age: 18-25, Category: Education, District: Śródmieście || Points: 750</p>
+                        </div>
+                    </label>
+                    <div class="congrats-message" id="message5" style="display: none;">CONGRATULATIONS, you are taking part!</div>
                 </div>
                 <div class="site">
-                    <img src="{{ url_for('static', filename='IT.png') }}" alt="IT Support for Non-Profits">
-                    <div class="site-details">
-                        <h3>IT Support for Non-Profits</h3>
-                        <p>Age: 18-25, Category: Technical Assistance, District: Mokotów, Warsaw, Poland</p>
-                    </div>
+                    <input type="checkbox" id="volunteer3" name="volunteer3" value="IT Support for Non-Profits" onclick="showMessage(this)">
+                    <label for="volunteer3">
+                        <img src="{{ url_for('static', filename='IT.png') }}" alt="IT Support for Non-Profits">
+                        <div class="site-details">
+                            <h3>IT Support for Non-Profits || Points: 650</h3>
+                            <p>Age: 16-22, Category: Technical Assistance, District: Mokotów, Warsaw, Poland || Points: 650</p>
+                        </div>
+                    </label>
+                    <div class="congrats-message" id="message3" style="display: none;">CONGRATULATIONS, you are taking part!</div>
                 </div>
                 <div class="site">
-                    <img src="{{ url_for('static', filename='animal_shelter.jpg') }}" alt="Animal Shelter">
-                    <div class="site-details">
-                        <h3>Animal Shelter</h3>
-                        <p>Age: 25-35, Category: Animal Care, District: Mokotów</p>
-                    </div>
+                    <input type="checkbox" id="volunteer1" name="volunteer1" value="Community Garden Volunteer" onclick="showMessage(this)">
+                    <label for="volunteer1">
+                        <img src="{{ url_for('static', filename='Garden_volunteer.png') }}" alt="Community Garden Volunteer">
+                        <div class="site-details">
+                            <h3>Community Garden Volunteer || Points: 500</h3>
+                            <p>Age: 16-20, Category: Environmental Care, District: Mokotów, Warsaw, Poland || Points: 500</p>
+                        </div>
+                    </label>
+                    <div class="congrats-message" id="message1" style="display: none;">CONGRATULATIONS, you are taking part!</div>
                 </div>
                 <div class="site">
-                    <img src="{{ url_for('static', filename='community_center.jpg') }}" alt="Community Center">
-                    <div class="site-details">
-                        <h3>Community Center</h3>
-                        <p>Age: 18-25, Category: Education, District: Śródmieście</p>
-                    </div>
+                    <input type="checkbox" id="volunteer2" name="volunteer2" value="Senior Companion" onclick="showMessage(this)">
+                    <label for="volunteer2">
+                        <img src="{{ url_for('static', filename='Social_Care.png') }}" alt="Senior Companion">
+                        <div class="site-details">
+                            <h3>Senior Companion || Points: 450</h3>
+                            <p>Age: 25-35, Category: Social Care, District: Mokotów, Warsaw, Poland, || Points: 450</p>
+                        </div>
+                    </label>
+                    <div class="congrats-message" id="message2" style="display: none;">CONGRATULATIONS, you are taking part!</div>
                 </div>
                 <div class="site">
-                    <img src="{{ url_for('static', filename='animal_shelter.jpg') }}" alt="Animal Shelter">
-                    <div class="site-details">
-                        <h3>Animal Shelter</h3>
-                        <p>Age: 25-35, Category: Animal Care, District: Mokotów</p>
-                    </div>
+                    <input type="checkbox" id="volunteer6" name="volunteer6" value="Animal Shelter" onclick="showMessage(this)">
+                    <label for="volunteer6">
+                        <img src="{{ url_for('static', filename='helping.png') }}" alt="Animal Shelter">
+                        <div class="site-details">
+                            <h3>Animal Shelter || Points: 320</h3>
+                            <p>Age: 25-35, Category: Animal Care, District: Mokotów || Points: 320</p>
+                        </div>
+                    </label>
+                    <div class="congrats-message" id="message6" style="display: none;">CONGRATULATIONS, you are taking part!</div>
                 </div>
             </div>
         </div>
@@ -68,17 +99,15 @@
         </div>
     </div>
 <script>
-    function showContent(sectionId) {
-        const sections = document.querySelectorAll('.content');
-        sections.forEach(section => {
-            if (section.id === sectionId) {
-                section.classList.add('active');
-            } else {
-                section.classList.remove('active');
-            }
-        });
+    function showMessage(checkbox) {
+        const messageId = 'message' + checkbox.id.replace('volunteer', '');
+        const message = document.getElementById(messageId);
+        if (checkbox.checked) {
+            message.style.display = 'block';
+        } else {
+            message.style.display = 'none';
+        }
     }
 </script>
 </body>
 </html>
-

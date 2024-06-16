@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VoluPro - Profile</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .points-section {
+            display: flex;
+            align-items: center;
+            font-size: 1.5em;
+            color: #FFD700;
+            margin-top: 20px;
+        }
+        .points-section img {
+            width: 24px;
+            height: 24px;
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -17,11 +31,19 @@
             <div class="profile">
                 <img src="{{ url_for('static', filename='profile.jpg') }}" alt="James">
                 <h3>James</h3>
-                <p>Medical Student • 36 Followers</p>
+                <p>High School Student • 36 Followers</p>
                 <div class="status">Online</div>
                 <div class="buttons">
                     <button class="follow-btn">Follow</button>
                     <button class="connect-btn">Connect</button>
+                </div>
+                <div class="profile-section">
+                    <h4>Points</h4>
+                    <p>James has earned points through various volunteer activities.</p>
+                </div>
+                <div class="profile-section points-section">
+                    <img src="{{ url_for('static', filename='star.png') }}" alt="Star">
+                    <span>1200</span>
                 </div>
                 <div class="profile-section">
                     <h4>About me</h4>
@@ -46,13 +68,8 @@
                     </div>
                 </div>
                 <div class="profile-section">
-                    <h4>Experience</h4>
-                    <p>UX Intern - Glycon software pvt (2018-2020, 3 years)</p>
-                    <p>UX Intern - Evergreen enterprise (2015-2017, 3 years)</p>
-                </div>
-                <div class="profile-section">
                     <h4>Education</h4>
-                    <p>B.Tech of technology - University of California (2018-2024)</p>
+                    <p>Student of High School in Warsaw</p>
                 </div>
                 <div class="profile-section">
                     <h4>Socials</h4>
