@@ -34,8 +34,10 @@ To get a local copy up and running, follow these simple steps:
     cd hackathon
     ```
 3. Run the application in the terminal
-   python app.py
-    
+   ``sh
+    python app.py 
+    ```
+   
 
 ## Usage
 
